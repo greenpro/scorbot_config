@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: sac_description
+    relative_path: urdf/scorbot_description.xacro
+  SRDF:
+    relative_path: config/scorbot_model.srdf
+  CONFIG:
+    author_name: Craig Christensen
+    author_email: crg.chrstnsn@gmail.com
+    generated_timestamp: 1487861758
