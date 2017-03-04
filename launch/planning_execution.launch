@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="sim" default="false" />
+    <arg name="debug" default="false" />
+
+    <!-- remap joints -->
+    <remap if="$(arg sim)" from="/follow_joint_trajectory" to="/arm_controller/follow_joint_trajectory" />
+    <remap if="$(arg sim)" from="/joint_states" to="/robot_description/joint_states" />
+
+    <!-- launch moveit -->
+    <include file="$(find scorbot_config)/launch/move_group.launch">
+        <arg name="debug" default="$(arg debug)" />
+    </include>
+</launch>
